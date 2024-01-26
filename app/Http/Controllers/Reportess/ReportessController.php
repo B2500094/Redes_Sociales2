@@ -80,6 +80,9 @@ class ReportessController extends Controller
         foreach ($columnas as $key => $columna) {
 
             switch ($columna->columna) {
+                case 'id_personal':
+                    array_push($select, 'personal.id_personal');
+                    break;
                 case 'ci':
                     array_push($select, 'personal.ci');
                     break;
@@ -94,6 +97,9 @@ class ReportessController extends Controller
                     break;
                     case 'informacion':
                         array_push($select, 'informacion.descripcion as informacion');
+                    break;
+                    case 'tipo_informacion':
+                        array_push($select, 'tipo_informacion.descripcion as tipo_informacion');
                     break;
 
                 case 'estado':
@@ -124,6 +130,7 @@ class ReportessController extends Controller
         $registro = $registro->leftjoin('personal', 'personal.id_personal','monitoreo.id_personal' );
         $registro = $registro->leftjoin('tipo_evento', 'tipo_evento.id_tipo_evento','monitoreo.tipo_evento' );
         $registro = $registro->leftjoin('informacion', 'informacion.id_informacion','monitoreo.informacion' );
+        $registro = $registro->leftjoin('tipo_informacion', 'tipo_informacion.id_tipo_informacion','monitoreo.tipo_informacion' );
         $registro = $registro->leftjoin('estados', 'estados.id_estado', 'monitoreo.estado');
         $registro = $registro->leftjoin('tendencia', 'tendencia.id_tendencia', 'monitoreo.tendencia');
         $registro = $registro->leftjoin('insumo', 'insumo.id_insumo', 'monitoreo.insumo');

@@ -95,7 +95,7 @@
              * */
 
             const regiones = $('select#regiones');
-            const estado = $('select#estado');
+            const estados = $('select#estados');
             const informacion = $('select#informacion');
             const tipo_evento = $('select#tipo_evento');
             const consultarRegistro = $('#consultar-registro');
@@ -184,7 +184,7 @@
             });
 
 
-          /*  const limpiarFormConsultaRegistro = () => {
+            const limpiarFormConsultaRegistro = () => {
 
                 _columnasIncluir = {
                     ci: 'CI',
@@ -227,7 +227,7 @@
                             <p class="col-12">${_columnasExcluir[key]}</p>
                         </li>`
                     );
-                }*/
+                }
 
                 //* Para referenciar con la librería waffler
                 $(document).ready(function() {
@@ -247,6 +247,7 @@
 
 
             const consultaRegistro = () => {
+                //alert(123);
 
                 const columnas = [];
                 const fltrosConsulta = {};
@@ -272,9 +273,9 @@
                 });
 
                 if (regiones.val().length > 0) fltrosConsulta.regiones = regiones.val();
-                if (estado.val().length > 0) fltrosConsulta.estado = estado.val();
+                if (estados.val().length > 0) fltrosConsulta.estados = estados.val();
                 if (informacion.val().length > 0) fltrosConsulta.estatus = informacion.val();
-                if (nomenclatura.val().length > 0) fltrosConsulta.nomenclatura = nomenclatura.val();
+               // if (nomenclatura.val().length > 0) fltrosConsulta.nomenclatura = nomenclatura.val();
 
                 fltrosConsulta.fechaRegistro=fechaRegistro.val();
 

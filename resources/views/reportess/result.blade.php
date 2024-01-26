@@ -79,7 +79,7 @@
                                         </thead>
                                         <tbody>
                                             @foreach ($registros as $registro)
-                                                <tr>i
+                                                <tr>
                                                     @foreach ($registro as $valor)
                                                         @if ($valor === true)
                                                             <td>SÍ</td>

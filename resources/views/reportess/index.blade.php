@@ -177,7 +177,8 @@
              * *------------------------------------------------
              * */
 
-            const estado = $('select#estado');
+            const estados = $('select#estados');
+
             const insumo = $('select#insumo');
             const tendencia = $('select#tendencia');
             const consultarRegistro = $('#consultar-registro');
@@ -342,11 +343,11 @@
                     let alias = '';
                     let columna = $(this).attr('id');
 
-                    if ($(this).find('input[type="text"]').val().trim().length > 0) {
+                    /*if ($(this).find('input[type="text"]').val().trim().length > 0) {
                         alias = $(this).find('input[type="text"]').val().trim();
-                    } else {
+                    } else {*/
                         alias = $(this).find('p').text();
-                    }
+                   // }
 
                     columnas.push({
                         columna,
@@ -357,7 +358,7 @@
                 if (estados.val().length > 0) fltrosConsulta.estados = estados.val();
                 if (tendencia.val().length > 0) fltrosConsulta.tendencia = tendencia.val();
                 if (insumo.val().length > 0) fltrosConsulta.insumo = insumo.val();
-                if (estatus.val().length > 0) fltrosConsulta.estatus = estatus.val();
+                //if (estatus.val().length > 0) fltrosConsulta.estatus = estatus.val();
 
                 // fltrosConsulta.fechaEntradaDesde=fechaEntradaDesde.val();
                 // fltrosConsulta.fechaEntradaHasta=fechaEntradaHasta.val();

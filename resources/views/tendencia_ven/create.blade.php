@@ -2,7 +2,7 @@
     {!!Form::open([
     'url'=>'/tendencia_ven',
     'method'=>'post','
-    id'=>'agregar_tendencia_ve',
+    id'=>'agregar_registro',
     'class'=>'m-4',
     'data-locked'=>'false',
     'data-crud'=>'add'

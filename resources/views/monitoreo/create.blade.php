@@ -2,7 +2,7 @@
 {!! Form::open([
     'url' => '/monitoreo',
     'method' => 'post',
-    'id' => 'agregar_monitoreo',
+    'id' => 'agregar_registro',
     'class' => 'm-4',
     'data-locked' => 'false',
     'data-crud' => 'add',
@@ -79,7 +79,7 @@
         ]) !!}
 
     </div>
-    
+
 
     <div class="col-6">
 
